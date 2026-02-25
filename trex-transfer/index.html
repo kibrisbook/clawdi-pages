@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Rex Transfer | Profesyonel Taşımacılık Hizmetleri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: #e94560;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e94560;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(233,69,96,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 100px 100px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            color: #e94560;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e94560 0%, #c73e54 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(233,69,96,0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(233,69,96,0.5);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: #e94560;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature i {
+            font-size: 1.5rem;
+            color: #e94560;
+            margin-top: 0.3rem;
+        }
+
+        .feature h4 {
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .phone-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e94560;
+            margin: 1rem 0;
+            display: block;
+            text-decoration: none;
+        }
+
+        .phone-number:hover {
+            color: #ff6b6b;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item i {
+            color: #e94560;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a14;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .phone-number {
+                font-size: 1.8rem;
+            }
+
+            .contact-box {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-truck-moving"></i>
+                T-Rex Transfer
+            </div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Anasayfa</a></li>
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="anasayfa">
+        <div class="hero-content">
+            <h1>Güçlü ve <span>Güvenilir</span> Taşımacılık</h1>
+            <p>T-Rex Transfer ile eşyalarınız emin ellerde. Profesyonel ekibimiz ve modern araç filomuzla her zaman yanınızdayız.</p>
+            <a href="tel:05554443322" class="cta-button">
+                <i class="fas fa-phone"></i> Hemen Ara
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="hizmetler">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmetlerimiz</h2>
+                <p>Tüm taşımacılık ihtiyaçlarınız için profesyonel çözümler</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Ev Taşıma</h3>
+                    <p>Eşyalarınızı özenle paketleyip, güvenle yeni adresinize taşıyoruz. Sigortalı ve garantili hizmet.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Ofis Taşıma</h3>
+                    <p>İşyeri taşımacılığında minimum kesinti ile maksimum verim. Profesyonel ekip, hızlı çözüm.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Depolama</h3>
+                    <p>Güvenli depolama alanlarımızda eşyalarınız koruma altında. Kısa ve uzun vadeli seçenekler.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Paketleme</h3>
+                    <p>Özel paketleme malzemeleri ve uzman kadro ile kırılma riski olmadan taşıma.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Şehirler Arası</h3>
+                    <p>Türkiye'nin her noktasına güvenli ve hızlı şehirlerarası taşımacılık hizmeti.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-piano-keyboard"></i>
+                    <h3>Ağır Eşya</h3>
+                    <p>Piyano, kasa ve özel eşyalarınız için uzman kadro ve özel ekipmanlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="hakkimizda">
+        <div class="container">
+            <div class="section-title">
+                <h2>Neden T-Rex Transfer?</h2>
+                <p>Bizi farklı kılan özellikler</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>Sigortalı Taşıma</h4>
+                        <p>Tüm eşyalarınız taşıma sırasında sigorta kapsamındadır.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Zamanında Teslimat</h4>
+                        <p>Söz verdiğimiz saatte kapınızdayız. Gecikme yok, stres yok.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h4>Uzman Ekip</h4>
+                        <p>Deneyimli ve eğitimli personelimizle profesyonel hizmet.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tags"></i>
+                    <div>
+                        <h4>Uygun Fiyat</h4>
+                        <p>Kaliteli hizmeti uygun fiyatlarla sunuyoruz. Gizli maliyet yok.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <h4>7/24 Destek</h4>
+                        <p>Her zaman ulaşabileceğiniz müşteri hizmetleri desteği.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h4>15+ Yıllık Deneyim</h4>
+                        <p>Sektördeki tecrübemizle güvenilir hizmet garantisi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="iletisim">
+        <div class="container">
+            <h2>Hemen Bize Ulaşın</h2>
+            <div class="contact-box">
+                <i class="fas fa-phone-alt" style="font-size: 3rem; color: #e94560; margin-bottom: 1rem;"></i>
+                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Tek yapmanız gereken aramak</p>
+                <a href="tel:05554443322" class="phone-number">0555 444 33 22</a>
+                <p>7 gün 24 saat hizmetinizdeyiz</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tüm Türkiye</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@trextransfer.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>7/24 Hizmet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 T-Rex Transfer. Tüm hakları saklıdır.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Profesyonel Taşımacılık Hizmetleri</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 46, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)';
+            }
+        });
+    </script>
+</body>
+</html>
