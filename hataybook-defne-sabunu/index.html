@@ -3,183 +3,523 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hatay Defne Sabunu - El yapımı, doğal成分, odunsu aromalı, cilt dostu. HatayBook'tan doğrudan teslimat.">
-  <meta name="keywords" content="hatay defne sabunu, defne sabunu, odunsu sabun, el yapımı sabun, doğalsabun, hatay ürünleri">
-  <meta name="author" content="HatayBook">
-  <meta property="og:title" content="Hatay Defne Sabunu - Doğal ve El Yapımı">
-  <meta property="og:description" content="El yapımı, doğal成分, odunsu aromalı, cilt dostu.">
-  <meta property="og:image" content="https://kibrisbook.github.io/clawdi-pages/hatay-defne-sabunu/images/hatay-defne-sabunu-banner-2026-02-26.png">
-  <meta property="og:url" content="https://kibrisbook.github.io/clawdi-pages/hatay-defne-sabunu/">
+  <meta name="description" content="Hatay Gar Sabunu - El yapımı, doğal ve otantik defne sabunları. %100 doğal malzemeler, zeytinyağı ve defne yağı ile hazırlanmış, hipoalerjenik ürünleri keşfedin.">
+  <meta name="keywords" content="defne sabunu, hatay sabunu, doğal sabun, zeytinyağlı sabun, el yapımı sabun, otantik sabun, hatay book">
+  <meta name="author" content="Hatay Gar Sabunu">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Hatay Gar Sabunu - Doğal Defne Sabunları">
+  <meta property="og:description" content="El yapımı, doğal ve otantik defne sabunları. %100 doğal malzemeler ile hazırlanmış hipoalerjenik ürünleri keşfedin.">
+  <meta property="og:image" content="images/banner.png">
+  <meta property="og:url" content="https://kibrisbook.github.io/clawdi-pages/hatay-gar-sabunu/">
   <meta property="og:type" content="website">
-  <title>Hatay Defne Sabunu - Doğal ve El Yapımı | HatayBook</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hatay Gar Sabunu - Doğal Defne Sabunları">
+  <meta name="twitter:description" content="El yapımı, doğal ve otantik defne sabunları. %100 doğal malzemeler ile hazırlanmış hipoalerjenik ürünleri keşfedin.">
+  <meta name="twitter:image" content="images/banner.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kibrisbook.github.io/clawdi-pages/hatay-gar-sabunu/">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧼</text></svg>">
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  
+  <!-- Custom Styles -->
   <style>
     :root {
-      --primary: #5c523f;
-      --primary-hover: #4a4133;
-      --accent: #e8d3a6;
-      --light: #faf8f5;
-      --dark: #2c2a25;
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --primary: #4a6f28;
+      --primary-dark: #3a5820;
+      --secondary: #d4af37;
+      --accent: #f5e6c4;
+      --background: #fdfbf7;
+      --text: #2d3748;
+      --text-light: #718096;
     }
-    * { font-family: 'Inter', sans-serif; }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
-    .fade-in { animation: fadeIn 0.5s ease-out forwards; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    
+    * {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(74, 111, 40, 0.2);
+    }
+    
+    .btn-secondary {
+      background-color: var(--secondary);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #c09a2d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+    }
+    
+    .feature-card {
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hero-section {
+      background: linear-gradient(to bottom, rgba(253, 251, 247, 0.8), rgba(253, 251, 247, 1)), 
+                  url('../images/banner.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .lazy-load {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    
+    .lazy-load.loaded {
+      opacity: 1;
+    }
   </style>
+  
+  <!-- Schema.org Product Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Hatay Gar Sabunu",
+    "image": "https://kibrisbook.github.io/clawdi-pages/hatay-gar-sabunu/images/banner.png",
+    "description": "El yapımı, doğal ve otantik defne sabunları. %100 doğal malzemeler ile hazırlanmış hipoalerjenik ürünleri keşfedin.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Hatay Gar Sabunu"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/",
+      "priceCurrency": "TRY",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Hataybook"
+      }
+    }
+  }
+  </script>
 </head>
-<body class="bg-[var(--light)] text-[var(--dark)]">
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-200/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="text-xl font-bold font-serif">HatayBook</div>
-        <nav class="hidden md:flex space-x-8">
-          <a href="#hakkında" class="text-gray-600 hover:text-[var(--primary)] transition">Hakkında</a>
-          <a href="#özellikler" class="text-gray-600 hover:text-[var(--primary)] transition">Özellikler</a>
-          <a href="#yorumlar" class="text-gray-600 hover:text-[var(--primary)] transition">Yorumlar</a>
-        </nav>
-        <a href="https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/" class="bg-[var(--primary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--primary-hover)] transition">
-          Satın Al
+<body class="min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
+          <span>🧼</span> Hatay Gar Sabunu
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#hakkimizda" class="text-gray-600 hover:text-primary transition-colors">Hakkımızda</a>
+          <a href="#urunler" class="text-gray-600 hover:text-primary transition-colors">Ürünler</a>
+          <a href="#ozellikler" class="text-gray-600 hover:text-primary transition-colors">Özellikler</a>
+          <a href="#iletisim" class="text-gray-600 hover:text-primary transition-colors">İletişim</a>
+        </div>
+        
+        <!-- CTA Button -->
+        <a href="https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/" 
+           target="_blank"
+           class="hidden md:block bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105">
+          Ürünleri İncele
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-gray-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#hakkimizda" class="block text-gray-600 hover:text-primary py-2">Hakkımızda</a>
+        <a href="#urunler" class="block text-gray-600 hover:text-primary py-2">Ürünler</a>
+        <a href="#ozellikler" class="block text-gray-600 hover:text-primary py-2">Özellikler</a>
+        <a href="#iletisim" class="block text-gray-600 hover:text-primary py-2">İletişim</a>
+        <a href="https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/" 
+           target="_blank"
+           class="block mt-4 bg-primary hover:bg-primary-dark text-white text-center py-2 rounded-lg">
+          Ürünleri İncele
         </a>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- HERO SECTION -->
-  <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[var(--light)] to-[#f0ece2]">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="fade-in">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[var(--dark)] mb-6">
-          Hatay Defne Sabunu<br>
-          <span class="text-[var(--primary)]">Doğal Gücüyle</span>
+  <!-- Hero Section -->
+  <section class="hero-section py-20 md:py-32 relative">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center fade-in">
+        <h1 class="text-4xl md:text-6xl font-bold text-primary mb-6">
+          Hatay Gar Sabunu
         </h1>
-        <p class="text-lg text-gray-600 mb-8 max-w-xl">
-          El yapımı, doğal成分, odunsu aromalı, cilt dostu. Hatay'ın en kaliteli defne yağını içeren bu sabun, hem cildinizi besler hem de duygusal açıdan rahatlatır.
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          El yapımı, doğal ve otantik defne sabunları. Hatay'ın en kaliteli zeytinyağı ve defne yağı ile hazırlanan, 
+          %100 doğal malzemelerden yapılan hipoalerjenik ürünleri keşfedin.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/" class="bg-[var(--primary)] text-white px-8 py-3 rounded-lg hover:bg-[var(--primary-hover)] transition text-center font-semibold">
-            🛒 Hemen Satın Al
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/" 
+             target="_blank"
+             class="btn-primary px-8 py-3 rounded-lg text-lg font-semibold flex items-center justify-center gap-2">
+            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+            Ürünleri İncele
           </a>
-          <a href="#hakkında" class="border-2 border-[var(--primary)] text-[var(--primary)] px-8 py-3 rounded-lg hover:bg-[var(--light)] transition text-center font-semibold">
-            Bilgi Al
+          <a href="#hakkimizda" class="btn-secondary px-8 py-3 rounded-lg text-lg font-semibold flex items-center justify-center gap-2">
+            <i data-lucide="info" class="w-5 h-5"></i>
+            Daha Fazla Bilgi
           </a>
-        </div>
-      </div>
-      <div class="fade-in" style="animation-delay: 0.2s;">
-        <img src="images/hatay-defne-sabunu-banner-2026-02-26.png" alt="Hatay Defne Sabunu" class="rounded-2xl shadow-2xl w-full object-cover">
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section id="özellikler" class="py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold font-serif mb-4">Doğal成分le Beslenmiş</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Her bir sabun, el emeği ve doğal成分lerle hazırlanır.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition text-center">
-          <div class="text-4xl mb-4">🌿</div>
-          <h3 class="text-xl font-semibold mb-3">100% Doğal</h3>
-          <p class="text-gray-600">Sentetik katkı madde içermez. Cildinize doğal成分lerle yakınır.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition text-center">
-          <div class="text-4xl mb-4">🌱</div>
-          <h3 class="text-xl font-semibold mb-3">El Yapımı</h3>
-          <p class="text-gray-600">Her sabun, titizlikle hazırlanmış ve dikkatle paketlenmiştir.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition text-center">
-          <div class="text-4xl mb-4">📦</div>
-          <h3 class="text-xl font-semibold mb-3">Hızlı Teslimat</h3>
-          <p class="text-gray-600">HatayBook ile siparişiniz hızlı ve güvenli şekilde kargoya verilir.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="hakkında" class="py-16 px-4 sm:px-6 lg:px-8 bg-[var(--primary)] text-white">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="fade-in">
-        <h2 class="text-3xl sm:text-4xl font-bold font-serif mb-6">HatayBook: 지역in Örnekleri</h2>
-        <p class="text-gray-200 mb-6">
-          HatayBook, Hatay'a özgü yöresel ürünleri dünyaya tanıtmak için 2013 yılında kurulmuştur. Tescilli bir marka olan HatayBook, Book Grup tarafından yönetilmektedir.
+  <!-- About Section -->
+  <section id="hakkimizda" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+          Hatay'ın En Kaliteli Defne Sabunu
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in">
+            <img src="images/banner.png" 
+                 alt="Hatay Gar Sabunu - Defne Sabunu Ürünleri" 
+                 class="w-full rounded-2xl shadow-lg lazy-load">
+          </div>
+          
+          <div class="fade-in">
+            <h3 class="text-2xl font-bold mb-4 text-primary">El Yapımı & Doğal</h3>
+            <p class="text-gray-600 mb-6">
+              Hatay Gar Sabunu, Hatay'ın zengin defne ve zeytinyağı kaynaklarını kullanarak el yapımı olarak ürettiğimiz 
+              en kaliteli sabunları sunar. Fabrikasyon değil, geleneksel yöntemlerle hazırlanmış, %100 doğal malzemelerden 
+              oluşan ürünlerimizle cildinize ve saçınıza en iyi bakımı sağlayın.
+            </p>
+            
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <i data-lucide="leaf" class="w-6 h-6 text-primary flex-shrink-0"></i>
+                <div>
+                  <h4 class="font-semibold text-primary">100% Doğal Malzemeler</h4>
+                  <p class="text-sm text-gray-600">Kimyasal katkı madde yok, sadece en kaliteli zeytinyağı ve defne yağı</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <i data-lucide="smile" class="w-6 h-6 text-primary flex-shrink-0"></i>
+                <div>
+                  <h4 class="font-semibold text-primary">Hipoalerjenik Formül</h4>
+                  <p class="text-sm text-gray-600">Tüm cilt tipleri için güvenli, hassas ciltlere uygun</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="w-6 h-6 text-primary flex-shrink-0"></i>
+                <div>
+                  <h4 class="font-semibold text-primary">Hatay Menşeli</h4>
+                  <p class="text-sm text-gray-600">Hatay'ın sıcaklığı ve doğal kaynakları ile üretilmiş kalite</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="ozellikler" class="py-20 bg-primary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        Neden Hatay Gar Sabunu?
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="feature-card bg-white rounded-2xl p-8 text-center text-gray-800">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="sprout" class="w-8 h-8 text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">100% Doğal</h3>
+          <p class="text-gray-600">Herhangi bir kimyasal katkı madde olmadan, sadece en kaliteli doğal malzemelerle hazırlanmış.</p>
+        </div>
+        
+        <div class="feature-card bg-white rounded-2xl p-8 text-center text-gray-800">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="star" class="w-8 h-8 text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Sertifikalı Kalite</h3>
+          <p class="text-gray-600">Hataybook markası olarak 10 yıldır customers memnuniyeti ile iş yapan kaliteli bir marka.</p>
+        </div>
+        
+        <div class="feature-card bg-white rounded-2xl p-8 text-center text-gray-800">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="truck" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Hızlı Teslimat</h3>
+          <p class="text-gray-600">Tüm Türkiye'ye hızlı ve güvenli kargo ile ürünlerimizi hemen sipariş edebilirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Highlights -->
+  <section id="urunler" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+          En Çok Tercih Edilen Ürünlerimiz
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="border rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="droplet" class="w-6 h-6 text-green-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Hataybook Halep Sabunu</h3>
+                <p class="text-gray-600 mb-2">El yapımı klasik Halep sabunu, zeytinyağı ve defne yağı ile hazırlanmış.</p>
+                <div class="flex items-center gap-2">
+                  <span class="text-yellow-500">★★★★★</span>
+                  <span class="text-gray-500 text-sm">(4.83 oy)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="border rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="package" class="w-6 h-6 text-yellow-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Defne Sabunu 100%</h3>
+                <p class="text-gray-600 mb-2">%100 defne yağı ile hazırlanmış, hassas ciltler için ideal.</p>
+                <div class="flex items-center gap-2">
+                  <span class="text-yellow-500">★★★★★</span>
+                  <span class="text-gray-500 text-sm">(5.00 oy)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="border rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="layers" class="w-6 h-6 text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Defne Setleri</h3>
+                <p class="text-gray-600 mb-2">Birden fazla sabun optionları ve özel setlerimiz.</p>
+                <div class="flex items-center gap-2">
+                  <span class="text-yellow-500">★★★★☆</span>
+                  <span class="text-gray-500 text-sm">(4.67 oy)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="border rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i data-lucide="award" class="w-6 h-6 text-purple-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Trendyol 9.7 Puan</h3>
+                <p class="text-gray-600 mb-2">Trendyol'da customers memnuniyeti ile en yüksek puanı alan marka.</p>
+                <div class="flex items-center gap-2">
+                  <span class="text-yellow-500">★★★★★</span>
+                  <span class="text-gray-500 text-sm">(9.7/10)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-br from-primary to-primary-dark">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">
+          Hatay'ın En Kaliteli Defne Sabunlarını keşfedin
+        </h2>
+        <p class="text-xl mb-8 text-green-100">
+          El yapımı, doğal ve otantik ürünlerimizle cildinize ve saçınıza en iyi bakımı sağlayın. 
+          %100 doğal malzemelerden hazırlanan ürünlerimizle doğal güzellik deneyimi yaşamak için 
+          hemen tıklayın!
         </p>
-        <p class="text-gray-200 mb-8">
-          Ürünlerimiz, bölgenin kültürel mirasını yansıtır ve yerel üreticilerle iş birliği içinde hazırlanır.
-        </p>
-        <a href="https://www.hataybook.com/" class="bg-white text-[var(--primary)] px-6 py-3 rounded-lg hover:bg-gray-100 transition inline-block font-semibold">
-          HatayBook.com
+        <a href="https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/" 
+           target="_blank"
+           class="btn-secondary px-10 py-4 rounded-lg text-xl font-semibold inline-flex items-center gap-2">
+          <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+          Ürünleri İncele - Hataybook'a Git
         </a>
       </div>
-      <div class="fade-in" style="animation-delay: 0.2s;">
-        <img src="https://images.unsplash.com/photo-1518658835767-a7528ca9e902?w=600&h=400&fit=crop" alt="Hatay Kültürü" class="rounded-2xl shadow-2xl w-full">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="iletisim" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+          Bize Ulaşın
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="font-semibold mb-2">E-posta</h3>
+            <p class="text-gray-600">bilgi@hataybook.com</p>
+          </div>
+          
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="font-semibold mb-2">WhatsApp</h3>
+            <p class="text-gray-600">0543 201 41 80</p>
+          </div>
+          
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="font-semibold mb-2">Adres</h3>
+            <p class="text-gray-600">Küçükdalyan Antakya Hatay</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--accent)]">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold font-serif mb-6 text-[var(--dark)]">Doğalproduct'sını Deneyin</h2>
-      <p class="text-gray-700 mb-8 text-lg">
-        Hatay Defne Sabunu ile cildinizi doğal成分lerle besleyin. El yapımı, kaliteli ve hatır sayılır bir fiyatla sizleri bekliyor.
-      </p>
-      <a href="https://www.hataybook.com/urun-etiketi/hatay-defne-sabunu/" class="bg-[var(--primary)] text-white px-8 py-4 rounded-lg hover:bg-[var(--primary-hover)] transition text-xl font-semibold inline-block">
-        🛒 Satın Almak İçin Tıklayın
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-[var(--dark)] text-white py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <h3 class="text-xl font-bold mb-4">HatayBook</h3>
+          <div class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+            <span>🧼</span> Hatay Gar Sabunu
+          </div>
           <p class="text-gray-400">
-            Hatay'a özgü yöresel ürünleri dünyaya tanıtmak için 2013'te kuruldu.
+            El yapımı, doğal ve otantik defne sabunları. %100 doğal malzemeler ile hazırlanan hipoalerjenik ürünleri keşfedin.
           </p>
         </div>
+        
         <div>
-          <h4 class="font-semibold mb-4">Linkler</h4>
+          <h4 class="text-white font-semibold mb-4">Hızlı Links</h4>
           <ul class="space-y-2">
-            <li><a href="#hakkında" class="text-gray-400 hover:text-white transition">Hakkında</a></li>
-            <li><a href="#özellikler" class="text-gray-400 hover:text-white transition">Özellikler</a></li>
-            <li><a href="https://www.hataybook.com/" class="text-gray-400 hover:text-white transition">Ana Sayfa</a></li>
+            <li><a href="#hakkimizda" class="hover:text-white transition-colors">Hakkımızda</a></li>
+            <li><a href="#urunler" class="hover:text-white transition-colors">Ürünler</a></li>
+            <li><a href="https://www.hataybook.com" target="_blank" class="hover:text-white transition-colors">Hataybook.com</a></li>
           </ul>
         </div>
+        
         <div>
-          <h4 class="font-semibold mb-4">İletişim</h4>
-          <p class="text-gray-400">
-            Küçükdalyan Antakya Hatay Merkez
-          </p>
-          <p class="text-gray-400">info@hataybook.com</p>
+          <h4 class="text-white font-semibold mb-4">Sosyal Medya</h4>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/hataybookcom" target="_blank" class="hover:text-white">
+              <i data-lucide="instagram" class="w-6 h-6"></i>
+            </a>
+            <a href="https://twitter.com/hataybookcom" target="_blank" class="hover:text-white">
+              <i data-lucide="twitter" class="w-6 h-6"></i>
+            </a>
+            <a href="https://www.facebook.com/hataybookcom.tr" target="_blank" class="hover:text-white">
+              <i data-lucide="facebook" class="w-6 h-6"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCLuRvNEaGMEBz1Mu-iszR1g" target="_blank" class="hover:text-white">
+              <i data-lucide="youtube" class="w-6 h-6"></i>
+            </a>
+          </div>
         </div>
+        
         <div>
-          <h4 class="font-semibold mb-4">SSS</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li>Ödeme Yöntemleri</li>
-            <li>Kargo Bilgileri</li>
-            <li>İptal & İade</li>
+          <h4 class="text-white font-semibold mb-4">Mağazalar</h4>
+          <ul class="space-y-2">
+            <li><a href="https://www.trendyol.com/magaza/hataybook-m-157668" target="_blank" class="hover:text-white transition-colors">Trendyol</a></li>
+            <li><a href="https://www.hepsiburada.com/magaza/hataybook" target="_blank" class="hover:text-white transition-colors">Hepsiburada</a></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-        <p>© 2026 HatayBook.com. Tüm hakları saklıdır.</p>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>© 2026 Hataybook.com - Tüm hakları saklıdır. Hataybook Markası bir "Book Grup" Kuruluşudur.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Back to Top -->
+  <button id="backToTop" class="fixed bottom-6 right-6 bg-primary hover:bg-primary-dark text-white p-4 rounded-full shadow-lg transition-all transform hover:scale-110 hidden z-50">
+    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+  </button>
+
   <script>
-    // Smooth scrolling for anchor links
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('button[onclick*="mobile-menu"]');
+    
+    // Smooth Scroll for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -188,6 +528,36 @@
         });
       });
     });
+    
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('hidden');
+        backToTop.classList.add('flex');
+      } else {
+        backToTop.classList.remove('flex');
+        backToTop.classList.add('hidden');
+      }
+    });
+    
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Lazy Load Images
+    const lazyImages = document.querySelectorAll('.lazy-load');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('loaded');
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    lazyImages.forEach(img => imageObserver.observe(img));
   </script>
 </body>
 </html>
