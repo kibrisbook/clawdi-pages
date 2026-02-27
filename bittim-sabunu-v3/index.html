@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bıttım Sabunu - %100 Organik Doğal Yöresel Ürün | Hataybook</title>
+  <meta name="description" content="Bıttım sabunu, saç dökülmesi ve egzemaya iyi gelen %100 organik doğal bir sabundur. Hataybook orijinal ürünü, menengiç yağından yapılır.">
+  <meta name="keywords" content="bıttım sabunu, doğal sabun, organik sabun, hataybook, menengiç sabunu, saç dökülmesi, egzama">
+  <link rel="canonical" href="https://kibrisbook.github.io/clawdi-pages/bittim-sabunu-v3/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bıttım Sabunu - %100 Organik Doğal Yöresel Ürün">
+  <meta property="og:description" content="Bıttım sabunu, saç dökülmesi ve egzemaya iyi gelmenin yolu. Menengiç yağından yapılan doğal çözüm.">
+  <meta property="og:image" content="https://kibrisbook.github.io/clawdi-pages/bittim-sabunu-v3/hero.webp">
+  <meta property="og:url" content="https://kibrisbook.github.io/clawdi-pages/bittim-sabunu-v3/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bıttım Sabunu - %100 Organik Doğal Yöresel Ürün">
+  <meta name="twitter:description" content="Bıttım sabunu, saç dökülmesi ve egzemaya iyi gelmenin yolu. Menengiç yağından yapılan doğal çözüm.">
+  <meta name="twitter:image" content="https://kibrisbook.github.io/clawdi-pages/bittim-sabunu-v3/hero.webp">
+
+  <!-- Schema.org Product Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Bıttım Sabunu - %100 Organik",
+    "description": "Menengiç yağından yapılan doğal sabun, saç dökülmesi ve egzemaya iyi gelir.",
+    "image": "https://kibrisbook.github.io/clawdi-pages/bittim-sabunu-v3/hero.webp",
+    "brand": { "@type": "Brand", "name": "Hataybook" },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.hataybook.com/urun-etiketi/bittim-sabunu/",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "TRY"
+    }
+  }
+  </script>
+
+  <!-- Fonts: Fraunces (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Inline CSS - No Tailwind CDN, no external libraries -->
+  <style>
+    :root {
+      --primary: #1a472a;      /* Koyu yeşil - Marka ana rengi */
+      --primary-dark: #0f2d1a; /* Hover durumu */
+      --accent: #c9a227;       /* Altın vurgu */
+      --text: #1a1a1a;         /* Ana metin */
+      --text-light: #555555;   /* İkincil metin */
+      --bg: #f5f0e8;           /* Krem arka plan */
+      --bg-alt: #ffffff;       /* Alternatif bölüm arka planı */
+      --white: #ffffff;
+      --radius: 16px;
+      --shadow: 0 8px 32px rgba(26, 71, 42, 0.12);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Utility classes */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(26, 71, 42, 0.2);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      background: rgba(245, 240, 232, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+      z-index: 1000;
+      padding: 16px 0;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--bg) 0%, #e8e4d9 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 3.5rem;
+      line-height: 1.1;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+
+    .hero-content .lead {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      font-weight: 500;
+    }
+
+    .badge svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--accent);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .feature-card {
+      background: var(--bg);
+      padding: 36px;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--white);
+    }
+
+    .feature-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .feature-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* Social Proof / Reviews */
+    .reviews {
+      padding: 100px 0;
+      background: var(--bg);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .review-card {
+      background: var(--white);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--accent);
+    }
+
+    .review-stars {
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .review-text {
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .review-author {
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+
+    .review-date {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* CTA Band */
+    .cta-band {
+      padding: 80px 0;
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta-band h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+    }
+
+    .cta-band p {
+      font-size: 1.2rem;
+      margin-bottom: 36px;
+      opacity: 0.9;
+    }
+
+    .cta-band .btn {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border: none;
+      font-size: 1.2rem;
+      padding: 18px 40px;
+    }
+
+    .cta-band .btn:hover {
+      background: #d4b23a;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      color: var(--white);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      opacity: 0.8;
+      line-height: 1.7;
+    }
+
+    .footer-links h4 {
+      font-weight: 700;
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      text-align: center;
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive design */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .trust-badges {
+        justify-content: center;
+      }
+
+      .features-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-content">
+      <a href="https://www.hataybook.com/urun-etiketi/bittim-sabunu/" class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        Hataybook
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Özellikler</a></li>
+        <li><a href="#reviews">Yorumlar</a></li>
+        <li><a href="#cta">Sipariş</a></li>
+      </ul>
+      <a href="https://www.hataybook.com/urun-etiketi/bittim-sabunu/" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content animate-on-scroll">
+        <h1>Bıttım Sabunu<br>%100 Organik Doğal</h1>
+        <p class="lead">
+          Menengiç (bıttım) yağından yapılan el yapımı pürüzsüz sabun. 
+          Saç dökülmesi, egzama ve cilt sorunlarına iyi gelir. 
+          Geleneksel Kazan yöntemiyle üretilir.
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="https://www.hataybook.com/urun-etiketi/bittim-sabunu/" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            Hemen Satın Al
+          </a>
+          <a href="#features" class="btn btn-secondary">Daha Fazla Bilgi</a>
+        </div>
+        <div class="trust-badges">
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            %100 Organik
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            El Yapımı
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            Vegan
+          </div>
+        </div>
+      </div>
+      <div class="hero-image animate-on-scroll">
+        <img src="hero.webp" alt="Bıttım Sabunu - Artisan handmade soap bars" width="5504" height="3072" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Neden Bıttım Sabunu?</h2>
+        <p>Doğal içerikleriyle cildinize ve saçlarınıza sunduğu benzersiz faydalarla seçilir.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3>Doğal ve Organik</h3>
+          <p>Saf bıttım (menengiç) yağı, su ve sabun mayası ile yapılır. Kimyasal katkı maddesi, paraben, SLS içermez.</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Saç & Saç Derisi</h3>
+          <p>Kepeği azaltır, saç dökülmesini engeller, saç köklerini güçlendirir. Antiseptik özellikleriyle cildi rahatlatır.</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3>Egzama & Mantar</h3>
+          <p>Antiseptik ve anti-fungal özellikleriyle egzama, mantar ve akne gibi cilt problemlerine karşı etkilidir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof / Reviews -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Müşteri Yorumları</h2>
+        <p>Binlerce müşterinin güvendiği Hataybook bıttım sabunu.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card animate-on-scroll">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Çok güzel hızlı teslim edildi ayrıca hediye için teşekkürler. %100 mükemmel ürün piyasada 20 30 TL lik sabunla kıyaslanamaz bile."</p>
+          <p class="review-author">Eda Candar</p>
+          <p class="review-date">3 Ocak 2022</p>
+        </div>
+        <div class="review-card animate-on-scroll">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Dün sipariş ettim bugün elimdeydi. Sabunlar fotoğraftaki gibi. %50 bıttım sabunu hediyesi yollamışlar, çok teşekkürler."</p>
+          <p class="review-author">Sultan Ayaz</p>
+          <p class="review-date">29 Ocak 2022</p>
+        </div>
+        <div class="review-card animate-on-scroll">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Çok araştırıp bu mağazadan almaya karar verdim. %100 bıttım sabunu. Bıttım sabununu araştırmanızı tavsiye ederim, gerçek bıttım sabunu çok faydalıdır."</p>
+          <p class="review-author">Yusuf Aydın</p>
+          <p class="review-date">15 Şubat 2022</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section id="cta" class="cta-band">
+    <div class="container animate-on-scroll">
+      <h2>Doğal Bıttım Sabunu Denemeye Başlayın</h2>
+      <p>Menengiç yağının faydalarını keşfedin. Bugün sipariş verin, yarın evinizde olur.</p>
+      <a href="https://www.hataybook.com/urun-etiketi/bittim-sabonu/" class="btn">
+        Sepete Ekle - Kaçırma!
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Hataybook</h3>
+          <p>Hatay Yöresel Ürünler. Geleneksel el yapımı sabunlarımız, benzersiz tatlarımız ve özenle seçilmiş diğer yöresel ürünlerle sizi ağırlamaktan mutluluk duyarız.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Kategoriler</h4>
+          <ul>
+            <li><a href="https://www.hataybook.com/urun-kategori/sabun/">Sabunlar</a></li>
+            <li><a href="https://www.hataybook.com/urun-kategori/sac-sabunu/">Saç Sabunu</a></li>
+            <li><a href="https://www.hataybook.com/urun-kategori/vucut-sabunu/">Vücut Sabunu</a></li>
+            <li><a href="https://www.hataybook.com/urun-kategori/yuz-sabunu/">Yüz Sabunu</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Bilgi</h4>
+          <ul>
+            <li><a href="https://hataybook.com/hakkimizda">Hakkımızda</a></li>
+            <li><a href="https://hataybook.com/iletisim">İletişim</a></li>
+            <li><a href="https://hataybook.com/sik-sorulan-sorular">SSS</a></li>
+            <li><a href="https://hataybook.com/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Yasal</h4>
+          <ul>
+            <li><a href="https://hataybook.com/gizlilik-politikasi">Gizlilik Politikası</a></li>
+            <li><a href="https://hataybook.com/sartlar-ve-kosullar">Şartlar ve Koşullar</a></li>
+            <li><a href="https://hataybook.com/mesafeli-satis-sozlesmesi">Mesafeli Satış Sözleşmesi</a></li>
+            <li><a href="https://hataybook.com/iptal-ve-iade-politikalari">İade Politikası</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Hataybook.com. Tüm hakları saklıdır. Hataybook, Book Grup kuruluşudur.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS for scroll animations -->
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
